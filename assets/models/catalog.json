@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "whisper": [
+    {
+      "id": "whisper-base",
+      "name": "Whisper Base (int8)",
+      "approxMB": 160,
+      "keepBothLanguagesLoaded": true,
+      "license": "MIT (OpenAI Whisper weights), sherpa-onnx export Apache-2.0",
+      "files": {
+        "encoder": {"url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-base/resolve/main/base-encoder.int8.onnx", "sha256": ""},
+        "decoder": {"url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-base/resolve/main/base-decoder.int8.onnx", "sha256": ""},
+        "tokens":  {"url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-base/resolve/main/base-tokens.txt", "sha256": ""}
+      }
+    },
+    {
+      "id": "whisper-small",
+      "name": "Whisper Small (int8)",
+      "approxMB": 375,
+      "keepBothLanguagesLoaded": false,
+      "license": "MIT (OpenAI Whisper weights), sherpa-onnx export Apache-2.0",
+      "files": {
+        "encoder": {"url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-small/resolve/main/small-encoder.int8.onnx", "sha256": ""},
+        "decoder": {"url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-small/resolve/main/small-decoder.int8.onnx", "sha256": ""},
+        "tokens":  {"url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-small/resolve/main/small-tokens.txt", "sha256": ""}
+      }
+    }
+  ]
+}

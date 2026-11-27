@@ -1,0 +1,59 @@
+name: Build Lisancom
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  android:
+    name: Android APK
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '17' }
+      - uses: subosito/flutter-action@v2
+        with: { channel: stable, cache: true }
+      - name: Generate platform files
+        run: flutter create --org com.lisancom --project-name lisancom --platforms=android,ios .
+      - name: minSdk 24
+        run: |
+          for g in android/app/build.gradle.kts android/app/build.gradle; do
+            [ -f "$g" ] && sed -i -E 's/minSdk\s*=\s*flutter\.minSdkVersion/minSdk = 24/; s/minSdkVersion\s+flutter\.minSdkVersion/minSdkVersion 24/' "$g"
+          done
+      - run: flutter pub get
+      - run: flutter analyze --no-fatal-infos
+      - run: flutter test
+      - run: flutter build apk --release
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Lisancom-Android-APK
+          path: build/app/outputs/flutter-apk/app-release.apk
+
+  ios:
+    name: iOS IPA (unsigned, for Sideloadly)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with: { channel: stable, cache: true }
+      - name: Generate platform files
+        run: flutter create --org com.lisancom --project-name lisancom --platforms=android,ios .
+      - name: iOS permissions, name, deployment target
+        run: |
+          P=ios/Runner/Info.plist
+          /usr/libexec/PlistBuddy -c "Add :NSMicrophoneUsageDescription string 'Lisancom uses the microphone to translate what you say. Audio stays on your device.'" $P || true
+          /usr/libexec/PlistBuddy -c "Add :NSSpeechRecognitionUsageDescription string 'Lisancom can use on-device speech recognition to translate what you say.'" $P || true
+          /usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName Lisancom" $P || /usr/libexec/PlistBuddy -c "Add :CFBundleDisplayName string Lisancom" $P
+          /usr/libexec/PlistBuddy -c "Set :CFBundleName Lisancom" $P || true
+          sed -i '' -E 's/IPHONEOS_DEPLOYMENT_TARGET = [0-9.]+;/IPHONEOS_DEPLOYMENT_TARGET = 15.5;/g' ios/Runner.xcodeproj/project.pbxproj
+      - run: flutter pub get
+      - run: flutter build ios --release --no-codesign
+      - name: Package IPA
+        run: |
+          mkdir -p Payload
+          cp -R build/ios/iphoneos/Runner.app Payload/
+          zip -qry Lisancom.ipa Payload
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Lisancom-iOS-IPA
+          path: Lisancom.ipa

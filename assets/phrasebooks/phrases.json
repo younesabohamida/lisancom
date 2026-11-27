@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "categories": [
+    {"icon": "🩺", "title": {"ar": "عند الطبيب", "de": "Beim Arzt"}, "phrases": [
+      {"ar": "أحتاج إلى موعد عند الطبيب.", "de": "Ich brauche einen Termin beim Arzt."},
+      {"ar": "أشعر بألم هنا.", "de": "Ich habe hier Schmerzen."},
+      {"ar": "عندي حمى منذ يومين.", "de": "Ich habe seit zwei Tagen Fieber."},
+      {"ar": "عندي حساسية من البنسلين.", "de": "Ich bin allergisch gegen Penicillin."},
+      {"ar": "هل يمكنك أن تتكلم ببطء من فضلك؟", "de": "Können Sie bitte langsamer sprechen?"},
+      {"ar": "هذه هي بطاقة التأمين الصحي الخاصة بي.", "de": "Hier ist meine Krankenversichertenkarte."}
+    ]},
+    {"icon": "💊", "title": {"ar": "الصيدلية", "de": "Apotheke"}, "phrases": [
+      {"ar": "معي وصفة طبية.", "de": "Ich habe ein Rezept."},
+      {"ar": "كم مرة في اليوم يجب أن أتناول هذا الدواء؟", "de": "Wie oft am Tag muss ich dieses Medikament nehmen?"},
+      {"ar": "هل يؤخذ قبل الأكل أم بعده؟", "de": "Nimmt man es vor oder nach dem Essen?"},
+      {"ar": "هل يوجد دواء بدون وصفة طبية لهذا؟", "de": "Gibt es dafür ein rezeptfreies Medikament?"},
+      {"ar": "أين أقرب صيدلية مناوبة؟", "de": "Wo ist die nächste Notdienst-Apotheke?"}
+    ]},
+    {"icon": "🚨", "title": {"ar": "الطوارئ", "de": "Notfall"}, "phrases": [
+      {"ar": "النجدة! أحتاج إلى مساعدة.", "de": "Hilfe! Ich brauche Hilfe."},
+      {"ar": "اتصل بسيارة إسعاف من فضلك، الرقم 112.", "de": "Bitte rufen Sie einen Krankenwagen, die 112."},
+      {"ar": "اتصل بالشرطة من فضلك، الرقم 110.", "de": "Bitte rufen Sie die Polizei, die 110."},
+      {"ar": "حدث حادث.", "de": "Es ist ein Unfall passiert."},
+      {"ar": "لا أستطيع التنفس جيدًا.", "de": "Ich kann nicht gut atmen."}
+    ]},
+    {"icon": "🏛️", "title": {"ar": "الدوائر الحكومية", "de": "Behörden"}, "phrases": [
+      {"ar": "لدي موعد في الساعة العاشرة.", "de": "Ich habe um zehn Uhr einen Termin."},
+      {"ar": "أريد تسجيل عنواني الجديد.", "de": "Ich möchte meine neue Adresse anmelden."},
+      {"ar": "ما هي الأوراق التي أحتاجها؟", "de": "Welche Unterlagen brauche ich?"},
+      {"ar": "هل يمكنني الحصول على نسخة من هذا المستند؟", "de": "Kann ich eine Kopie von diesem Dokument bekommen?"},
+      {"ar": "لم أفهم الرسالة. هل يمكنك أن تشرحها لي؟", "de": "Ich habe den Brief nicht verstanden. Können Sie ihn mir erklären?"},
+      {"ar": "أحتاج إلى مترجم.", "de": "Ich brauche einen Dolmetscher."}
+    ]},
+    {"icon": "🛒", "title": {"ar": "التسوق", "de": "Einkaufen"}, "phrases": [
+      {"ar": "كم سعر هذا؟", "de": "Wie viel kostet das?"},
+      {"ar": "هل يمكنني الدفع بالبطاقة؟", "de": "Kann ich mit Karte bezahlen?"},
+      {"ar": "أبحث عن هذا المنتج.", "de": "Ich suche dieses Produkt."},
+      {"ar": "أريد إرجاع هذا.", "de": "Ich möchte das zurückgeben."},
+      {"ar": "هل هذا حلال؟", "de": "Ist das halal?"}
+    ]},
+    {"icon": "🚆", "title": {"ar": "المواصلات", "de": "Verkehrsmittel"}, "phrases": [
+      {"ar": "أين محطة القطار؟", "de": "Wo ist der Bahnhof?"},
+      {"ar": "تذكرة واحدة إلى ميونخ من فضلك.", "de": "Eine Fahrkarte nach München, bitte."},
+      {"ar": "هل هذا الباص يذهب إلى وسط المدينة؟", "de": "Fährt dieser Bus in die Innenstadt?"},
+      {"ar": "متى يغادر القطار التالي؟", "de": "Wann fährt der nächste Zug?"},
+      {"ar": "من أي رصيف؟", "de": "Von welchem Gleis?"}
+    ]},
+    {"icon": "🏠", "title": {"ar": "السكن", "de": "Wohnen"}, "phrases": [
+      {"ar": "التدفئة لا تعمل.", "de": "Die Heizung funktioniert nicht."},
+      {"ar": "هل الإيجار شامل التدفئة والتكاليف الإضافية؟", "de": "Ist die Miete warm, also inklusive Nebenkosten?"},
+      {"ar": "متى يمكنني مشاهدة الشقة؟", "de": "Wann kann ich die Wohnung besichtigen?"},
+      {"ar": "يوجد تسرب ماء في الحمام.", "de": "Im Bad ist ein Wasserschaden."}
+    ]},
+    {"icon": "💼", "title": {"ar": "العمل", "de": "Arbeit"}, "phrases": [
+      {"ar": "أنا مريض اليوم ولا أستطيع الحضور إلى العمل.", "de": "Ich bin heute krank und kann nicht zur Arbeit kommen."},
+      {"ar": "متى يبدأ الدوام؟", "de": "Wann beginnt die Arbeitszeit?"},
+      {"ar": "أحتاج إلى شهادة عمل.", "de": "Ich brauche eine Arbeitsbescheinigung."},
+      {"ar": "هل يمكنك أن تريني كيف يعمل هذا؟", "de": "Können Sie mir zeigen, wie das funktioniert?"}
+    ]},
+    {"icon": "🏫", "title": {"ar": "المدرسة والروضة", "de": "Schule & Kita"}, "phrases": [
+      {"ar": "طفلي مريض اليوم.", "de": "Mein Kind ist heute krank."},
+      {"ar": "سآتي لأخذ طفلي في الساعة الثالثة.", "de": "Ich hole mein Kind um drei Uhr ab."},
+      {"ar": "متى موعد اجتماع أولياء الأمور؟", "de": "Wann ist der Elternabend?"},
+      {"ar": "كيف يتقدم طفلي في المدرسة؟", "de": "Wie kommt mein Kind in der Schule zurecht?"}
+    ]},
+    {"icon": "🏦", "title": {"ar": "البنك", "de": "Bank"}, "phrases": [
+      {"ar": "أريد فتح حساب بنكي.", "de": "Ich möchte ein Bankkonto eröffnen."},
+      {"ar": "بطاقتي لا تعمل.", "de": "Meine Karte funktioniert nicht."},
+      {"ar": "أريد تحويل مال.", "de": "Ich möchte Geld überweisen."},
+      {"ar": "أين أقرب صراف آلي؟", "de": "Wo ist der nächste Geldautomat?"}
+    ]},
+    {"icon": "💬", "title": {"ar": "الحياة اليومية", "de": "Alltag"}, "phrases": [
+      {"ar": "مرحبًا، كيف حالك؟", "de": "Hallo, wie geht es Ihnen?"},
+      {"ar": "شكرًا جزيلًا.", "de": "Vielen Dank."},
+      {"ar": "عفوًا، لا أتكلم الألمانية جيدًا.", "de": "Entschuldigung, ich spreche nicht gut Deutsch."},
+      {"ar": "هل يمكنك أن تكرر ذلك من فضلك؟", "de": "Können Sie das bitte wiederholen?"},
+      {"ar": "أين الحمام؟", "de": "Wo ist die Toilette?"}
+    ]}
+  ]
+}
