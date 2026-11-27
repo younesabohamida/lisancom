@@ -18,7 +18,9 @@ jobs:
       - name: minSdk 24
         run: |
           for g in android/app/build.gradle.kts android/app/build.gradle; do
-            [ -f "$g" ] && sed -i -E 's/minSdk\s*=\s*flutter\.minSdkVersion/minSdk = 24/; s/minSdkVersion\s+flutter\.minSdkVersion/minSdkVersion 24/' "$g"
+            if [ -f "$g" ]; then
+              sed -i -E 's/minSdk\s*=\s*flutter\.minSdkVersion/minSdk = 24/; s/minSdkVersion\s+flutter\.minSdkVersion/minSdkVersion 24/' "$g"
+            fi
           done
       - run: flutter pub get
       - run: flutter analyze --no-fatal-infos
